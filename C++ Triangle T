@@ -1,0 +1,70 @@
+#include <iostream>
+#include <string>
+using namespace std;
+#include <math.h>       /* sqrt (vierkanstwortel) */
+#include <string>
+double t1;
+double t2;
+double t3;
+
+int main()
+{
+    //printing out the UI type of thing
+    cout << "Welcome by triangle T-completion" << endl << "Now you need to type the T numbers (the length)" << endl;
+    cout << "  1     2   " << endl;
+    cout << " TTTTTTTTTTOOOOO " << endl;
+    cout << " O  T^90   OO" << endl;
+    cout << " O  T     0O" << endl;
+    cout << " O  T 3 OO" << endl;
+    cout << " O  T OO" << endl;
+    cout << " O  TO" << endl;
+    cout << " OOO " << endl;
+    cout << " OO " << endl << endl << endl << "You have (Type in lengths) :" << endl << endl;
+
+    cout << "  1     2   " << endl;
+    cout << " 1111122222 " << endl;
+    cout << "     3     " << endl;
+    cout << "     3 3   " << endl;
+    cout << "     3     " << endl << endl;
+
+    //asking for the numbers
+    cout << "1= ";
+    cin >> t1;
+    cout << "2= ";
+    cin >> t2;
+    cout << "3= ";
+    cin >> t3;
+    cout << "A test if they are good: " << t3 << " + " << t2 << " + "<< t1 << " = " << t3 + t2 + t1 << endl;
+    //And now.... the math!
+    //schuine 1 (pithagoras)
+    double s1Temp = t2*t2+t3*t3;
+    double s1 = sqrt(s1Temp);
+    //En nu Vergrootingsfactor zoeken  (later DELEN!)
+    double g1 = t2 / t1;
+    //En nu toepassen op schuineZijde (s1) om s2 the berekenen
+    double s2 = s1 / g1;
+    //En nu het totaal (s3) wand 1+2=3
+    double s3 = s2 + s1;
+
+    //een test.
+    //cout << "Vergrootings factor: " << g1 <<endl << "Schuine zijde 1: " << s1 << endl << "Schuine zijde 2: " << s2 <<endl << "Schuine zijde 3: " << s3 << endl;
+
+    //En nu de COOOOLLLE shit (niet echt buh jong)
+    //onbekende x die we bij t1 moeten gaan tellen
+    //moeten we gaan zoeken, nodig t1 en s1 (en x)
+    double extra = s2*s2 - t1*t1;
+    double x = sqrt(extra);
+    // en nu de uitkomst
+    double uitkomst = t3 + x;
+    cout << uitkomst << "  EUREKA ps: type more for more" << endl;
+    string daarna;
+    cin >> daarna;
+    if (daarna == "more"){
+        cout << "Vergrootings factor: " << g1 <<endl << "Schuine zijde 1: " << s1 << endl << "Schuine zijde 2: " << s2 <<endl << "Schuine zijde 3: " << s3 << endl;
+        cin >> daarna;
+    }
+
+
+
+    return 1;
+}

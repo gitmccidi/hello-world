@@ -43,13 +43,13 @@ int main()
     double g1 = t2 / t1;
     //En nu toepassen op schuineZijde (s1) om s2 the berekenen
     double s2 = s1 / g1;
-    //En nu het totaal (s3) wand 1+2=3
+    //En nu het totaal (s3) wand 1+2=3 (niet op die logic letten, linux chmod inspired logic xD)
     double s3 = s2 + s1;
 
     //een test.
     //cout << "Vergrootings factor: " << g1 <<endl << "Schuine zijde 1: " << s1 << endl << "Schuine zijde 2: " << s2 <<endl << "Schuine zijde 3: " << s3 << endl;
 
-    //En nu de COOOOLLLE shit (niet echt buh jong)
+    //En nu de COOOOLLLE shizzel (niet echt buh jong)
     //onbekende x die we bij t1 moeten gaan tellen
     //moeten we gaan zoeken, nodig t1 en s1 (en x)
     double extra = s2*s2 - t1*t1;
